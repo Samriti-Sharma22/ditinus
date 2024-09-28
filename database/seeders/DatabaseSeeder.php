@@ -8,11 +8,13 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+   
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
+        $this->call(EmployeesTableSeeder::class);
         // User::factory(10)->create();
 
         User::factory()->create([
@@ -20,4 +22,5 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
     }
+  
 }
